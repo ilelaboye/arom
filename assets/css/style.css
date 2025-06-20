@@ -405,6 +405,7 @@ small {
 }
 .p-img .pic img {
   max-height: 200px;
+  object-fit: cover;
 }
 .p-img .text {
   max-height: 200px;
