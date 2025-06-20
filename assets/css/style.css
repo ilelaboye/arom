@@ -159,8 +159,8 @@ rounded-circle {
 }
 nav ul li a:hover,
 nav ul li.active a {
-  background-color: #0d4d2e;
-  color: #fff !important;
+  text-decoration: underline;
+  color: #010101 !important;
   border-radius: 50rem !important;
 }
 .bg-start {
@@ -251,11 +251,6 @@ small {
   font-size: 0.8rem;
   color: #ffffffcc;
 }
-/* .bg-blur {
-  /* background: linear-gradient(180deg, #EAF6F2 0%, #EEFFF3 100%); */
-/* background: transparent; */
-/* backdrop-filter: blur(100px); */
-/* }  */
 .footer {
   background: linear-gradient(180deg, #eaf6f2 0%, #eefff3 100%);
   margin-top: 7rem;
@@ -266,9 +261,8 @@ small {
 .tiny img {
   width: 20px;
 }
-.shade-white {
-  color: #ffffffcc;
-  font-size: smaller;
+.icon {
+  width: 10px;
 }
 
 /* aboutpage */
@@ -551,7 +545,7 @@ small {
   .footer {
     margin-top: 7rem;
   }
-  .footer .logo img {
+  .footer .logo {
     width: 230px;
   }
   .pdd a .px-3 {
