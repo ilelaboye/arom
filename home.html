@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>AROM HOMEPAGE</title>
+  </head>
+  <body>
+    <div class="home-wrapper">
+      <div class="arom-nav">
+        <nav
+          class="container py-2 px-4 d-flex fixed-top justify-content-between align-items-center navbar-expand-md border rounded-pill"
+        >
+          <div class="navbar-brand logo">
+            <img src="./assets/imgs/logo.png" alt="" />
+          </div>
+          <button
+            id="toggleBtn"
+            onclick="toggleNav()"
+            class="arom-green rounded menu-icon navbar-toggler"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="14"
+              viewBox="0 0 21 14"
+              fill="none"
+            >
+              <path
+                d="M19.5 2H1.5C1.23478 2 0.98043 1.89464 0.792893 1.70711C0.605357 1.51957 0.5 1.26522 0.5 1C0.5 0.734784 0.605357 0.48043 0.792893 0.292893C0.98043 0.105357 1.23478 0 1.5 0H19.5C19.7652 0 20.0196 0.105357 20.2071 0.292893C20.3946 0.48043 20.5 0.734784 20.5 1C20.5 1.26522 20.3946 1.51957 20.2071 1.70711C20.0196 1.89464 19.7652 2 19.5 2ZM20.5 7C20.5 6.73478 20.3946 6.48043 20.2071 6.29289C20.0196 6.10536 19.7652 6 19.5 6H1.5C1.23478 6 0.98043 6.10536 0.792893 6.29289C0.605357 6.48043 0.5 6.73478 0.5 7C0.5 7.26522 0.605357 7.51957 0.792893 7.70711C0.98043 7.89464 1.23478 8 1.5 8H19.5C19.7652 8 20.0196 7.89464 20.2071 7.70711C20.3946 7.51957 20.5 7.26522 20.5 7ZM20.5 13C20.5 12.7348 20.3946 12.4804 20.2071 12.2929C20.0196 12.1054 19.7652 12 19.5 12H1.5C1.23478 12 0.98043 12.1054 0.792893 12.2929C0.605357 12.4804 0.5 12.7348 0.5 13C0.5 13.2652 0.605357 13.5196 0.792893 13.7071C0.98043 13.8946 1.23478 14 1.5 14H19.5C19.7652 14 20.0196 13.8946 20.2071 13.7071C20.3946 13.5196 20.5 13.2652 20.5 13Z"
+                fill="white"
+              />
+            </svg>
+            <span class="text-white ms-2">MENU</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li>
+                <a href="./services.html" class="text-dark nav-link"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="text-dark nav-link">About Us</a>
+              </li>
+              <li>
+                <a href="./contact.html" class="text-dark nav-link"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div class="navbar-nav ms-auto">
+              <li>
+                <a
+                  href="./services.html"
+                  class="nav-link arom-green rounded-pill"
+                  >Explore our services</a
+                >
+              </li>
+            </div>
+          </div>
+          <aside class="sidebar" id="sidebar">
+            <div class="side-logo logo-close mt-5 mb-5">
+              <img src="./assets/imgs/logo.png" alt="" />
+              <button id="close-btn" class="close-btn" onclick="toggleNav()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18.8137 17.9132L12.8998 11.9961L18.8137 6.07902C19.0519 5.83232 19.0519 5.44113 18.8137 5.19436C18.5695 4.94144 18.1667 4.93445 17.9139 5.17874L12 11.0958L6.08616 5.17881C5.83959 4.94051 5.44862 4.94051 5.20197 5.17881C4.9492 5.4231 4.9422 5.82618 5.18636 6.0791L11.1002 11.9961L5.18636 17.9131C5.06704 18.0325 5 18.1944 5 18.3632C4.99992 18.7148 5.28486 18.9999 5.6363 19C5.8051 19.0002 5.96699 18.933 6.08616 18.8134L12 12.8964L17.9139 18.8135C18.033 18.9331 18.195 19.0002 18.3638 19C18.5325 18.9999 18.6942 18.9329 18.8135 18.8136C19.0621 18.565 19.0622 18.1618 18.8137 17.9132Z"
+                    fill="#010101"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="navbarSupportedContent">
+              <ul class="navbar-nav nav ms-auto mb-2 mb-lg-0">
+                <li>
+                  <a href="./services.html" class="text-dark nav-link"
+                    >Our Services</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="text-dark nav-link">About Us</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="text-dark nav-link"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="mt-4">
+                  <a
+                    href="./services.html"
+                    class="ms-md-auto nav-link arom-green rounded-pill text-center"
+                    >Explore our services</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </nav>
+      </div>
+
+      <div class="content">
+        <div class="bg-arom">
+          <section class="container h-hero mb-4">
+            <div class="home-hero text-center">
+              <div
+                class="mb-3 d-inline-flex kicker rounded-pill align-items-center"
+              >
+                <span
+                  class="rounded-pill arom-green text-white px-3 py-2 kicker-pill primary"
+                  >New</span
+                >
+                <span
+                  class="text-center ps-2 pe-4 py-2 text-dark secondary kicker-pill"
+                >
+                  Healthcare Without Borders</span
+                >
+              </div>
+
+              <div class="row text-center">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <h1 class="ft-recoleta card-title">
+                        Delivering Quality. Driving Growth. <br />
+                        Transforming Healthcare.
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-column align-items-center">
+                <p class="">
+                  Connecting Africa to life-saving pharmaceuticals, innovative
+                  medical technology, and world-class healthcare strategies.
+                </p>
+                <a href="" class="btn rounded-pill arom-green"
+                  >Explore Our Services
+                  <span
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.6253 4.03523L4.34457 13.316"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.15486 4.05092L13.6253 4.03483L13.6098 11.5059"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></span
+                ></a>
+              </div>
+            </div>
+            <div>
+              <img class="simg simg1" src="./assets/imgs/32.svg" alt="" />
+              <img class="simg simg2" src="./assets/imgs/33.svg" alt="" />
+            </div>
+          </section>
+
+          <section class="container py-5 overflow-hidden home-images">
+            <div class="row row-cols-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="./assets/imgs/20.png" class="" alt="..." />
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./assets/imgs/21.png" class="" alt="..." />
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./assets/imgs/22.png" class="" alt="..." />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- end of row images -->
+
+        <!-- arom-who we are  -->
+
+        <section class="container who-we-are texts-image">
+          <div class="row mb-4">
+            <div class="col-sm-6">
+              <div class="card wwa">
+                <div class="card-body h-100">
+                  <div class="mt-5 a">
+                    <span
+                      class="border rounded-pill w-100 text-center text-dark mini-header"
+                      >Who We Are</span
+                    >
+                  </div>
+                  <h2 class="ft-recoleta card-title mt-4">
+                    Improving Lives with Trusted Healthcare Products and
+                    Partnerships
+                  </h2>
+                  <p class="card-text mt-4 ft-onest text-dark fs-8">
+                    Arom Healthcare Nigeria Limited is a leading provider of
+                    pharmaceuticals, medical and laboratory equipment across
+                    Nigeria and Africa. We also serve as a trusted local partner
+                    for global healthcare brands, offering business development,
+                    regulatory support, and market integration services.
+                  </p>
+                  <a href="" class="mt-3 btn rounded-pill arom-green fs-small"
+                    >Learn More
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.6253 4.03523L4.34457 13.316"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.15486 4.05092L13.6253 4.03483L13.6098 11.5059"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body h-100">
+                  <img src="./assets/imgs/23.png" alt="" class="w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- end of who we are -->
+
+        <section class="container-fluid what-we-do bg-deeper-green pb-3">
+          <div class="header text-center pt-5 pb-3">
+            <div class="text-center mt-2">
+              <span
+                class="border rounded-pill mini-header text-center text-white"
+                >What We Do</span
+              >
+              <h3 class="mt-4 ft-recoleta text-white">
+                Powering Healthcare Access <br />
+                and Innovation Across Africa
+              </h3>
+            </div>
+          </div>
+          <div class="row mb-4 g-4">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/1.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">Pharmaceutical Distribution</h6>
+                    <p class="card-text fs-8">
+                      Delivering registered, quality-assured medications to
+                      public and private healthcare institutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/2.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">Medical Equipment Supply</h6>
+                    <p class="card-text fs-8">
+                      Sourcing, installing, and supporting high-quality surgical
+                      tools and hospital-grade equipment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/3.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">
+                      Laboratory Equipment & Diagnostics
+                    </h6>
+                    <p class="card-text fs-8">
+                      Equipping labs with advanced diagnostic and research tools
+                      — with full technical support.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/4.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">
+                      Business Development & Market Strategy
+                    </h6>
+                    <p class="card-text fs-8">
+                      Helping healthcare companies build and scale in Nigeria
+                      and Africa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/5.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">Integration & Representation</h6>
+                    <p class="card-text fs-8">
+                      Acting as local representatives for international brands —
+                      from distributor selection to operations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+              <div class="d-flex justify-content-center">
+                <div class="h-100 p-img">
+                  <div class="pic">
+                    <img
+                      src="./assets/imgs/6.jpg"
+                      class="card-img-top w-100 rounded-top"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="card-body text text-white">
+                    <h6 class="card-title">Regulatory & Logistics Support</h6>
+                    <p class="card-text fs-8">
+                      Seamless registration, compliance, warehousing, and
+                      distribution across African borders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of what we do -->
+
+        <section class="container pt-4 why-choose-us texts-image">
+          <div class="row mb-5">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="cd-body wcu-img">
+                  <img src="./assets/imgs/24.png" alt="" class="w-100 h-100" />
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card wcu">
+                <div class="cd-body">
+                  <div class="mt-5 a">
+                    <span
+                      class="mini-header border rounded-pill w-100 text-center text-dark"
+                      >Why Choose Us</span
+                    >
+                  </div>
+                  <h2 class="ft-recoleta card-title mt-4 mb-2 fw-bold">
+                    Trusted. Local. <span class="text-color">Strategic</span>
+                  </h2>
+                  <div class="wcu-info mt-4">
+                    <div class="wcu-num d-flex mb-2">
+                      <div class="">
+                        <img src="./assets/imgs/27.svg" alt="" />
+                      </div>
+                      <div class="ms-2">
+                        <h6>Deep Market Knowledge</h6>
+                        <p class="fs-9">
+                          Experts in navigating African healthcare landscap
+                        </p>
+                      </div>
+                    </div>
+                    <div class="wcu-num d-flex mb-2">
+                      <div class="">
+                        <img src="./assets/imgs/28.svg" alt="" />
+                      </div>
+                      <div class="ms-2">
+                        <h6>Regulatory Expertise</h6>
+                        <p class="fs-9">
+                          End-to-end support for NAFDAC, SONCAP, and more
+                        </p>
+                      </div>
+                    </div>
+                    <div class="wcu-num d-flex mb-2">
+                      <div class="">
+                        <img src="./assets/imgs/29.svg" alt="" />
+                      </div>
+                      <div class="ms-2">
+                        <h6>Global Partnerships</h6>
+                        <p class="fs-9">
+                          Representing top-tier international brands.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="wcu-num d-flex mb-2">
+                      <div class="">
+                        <img src="./assets/imgs/30.svg" alt="" />
+                      </div>
+                      <div class="ms-2">
+                        <h6>Pan African Reach</h6>
+                        <p class="fs-9">
+                          Active network across West, East, and Southern Africa.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="wcu-num d-flex">
+                      <div class="">
+                        <img src="./assets/imgs/31.svg" alt="" />
+                      </div>
+                      <div class="ms-2">
+                        <h6>Integrity & Compliance</h6>
+                        <p class="fs-9">
+                          Transparent and ethical in every engagement.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-container d-flex flex-column align-items-center">
+          <section class="overlap-section mt-md-5">
+            <div class="p-4 d-flex align-items-center justify-content-center">
+              <div class="pt-5 text-center">
+                <span
+                  class="bg-start border rounded-pill mini-header text-white"
+                >
+                  <svg
+                    class="mb-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_176_2979)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10.1721 1.05091C9.86469 1.33032 9.46655 3.342 9.63418 3.77506C9.80884 4.22216 10.2489 3.97767 10.4724 3.32107C11.101 1.49795 10.9474 0.352432 10.1721 1.05091ZM4.55621 1.32336C4.33266 1.54691 5.10799 4.01252 5.49917 4.29895C6.19765 4.81582 6.47699 4.21513 6.03698 3.12548C5.34546 1.39313 4.9613 0.918203 4.55621 1.32336ZM14.9847 3.50254C14.5726 3.68422 13.0638 5.45135 13.0638 5.75169C13.0638 6.12889 13.5178 5.98922 14.0417 5.45135C15.5504 3.90068 15.9486 3.08347 14.9847 3.50254ZM2.99156 6.75766C3.09631 6.75766 3.8786 6.63198 3.48749 6.35257C2.89376 5.93344 0.67251 4.70411 0.421068 4.92063C0.0788517 5.21402 2.56546 6.75766 2.99156 6.75766ZM12.4981 7.51207C12.1977 6.17792 10.1092 4.87876 8.66333 5.1302C4.9613 5.77283 3.47351 9.77519 6.0719 12.0942C6.26749 12.2688 6.26046 12.4923 6.04393 12.6809C5.69477 12.9882 5.79249 13.6588 6.26749 14.1687C6.30936 14.2176 6.3303 14.2804 6.3303 14.3433C6.3303 14.4062 6.29545 14.4621 6.23953 14.504C5.54105 15.0279 6.10681 15.7822 6.2814 15.9359C6.44214 16.0826 7.04978 16.0896 7.76224 16.1385L7.86003 16.362C8.13944 17.0255 9.29197 17.4097 9.68308 16.9697C9.95553 16.6623 10.2 16.2921 10.2 16.1874C10.2 16.0896 10.2838 16.0756 10.7238 16.0756C11.7227 16.0756 12.1348 15.3142 11.5201 14.6158C11.3176 14.3853 11.4014 14.1059 11.5411 14.1059C12.1488 14.1059 12.1767 13.4912 11.6389 12.8626C11.3735 12.5482 11.4014 12.4574 11.9323 11.8986C13.0569 10.7111 13.2734 8.42011 12.2466 8.60868C11.2617 8.79029 12.547 9.1535 10.7798 11.9126L10.5422 12.2827C10.4864 12.3666 10.3955 12.4155 10.2977 12.4085L10.1022 12.3945C9.65519 12.3666 9.60629 12.2059 9.92061 11.7519C10.0393 11.5843 10.1371 11.4237 10.1371 11.3957C10.1371 11.3748 10.2279 11.235 10.3467 11.0954C10.5632 10.8229 10.7937 10.2711 10.7309 10.1664C10.5842 9.92884 10.0743 10.1593 10.0743 10.4667C10.0743 10.5784 9.99044 10.7531 9.87172 10.8858C9.48053 11.3398 9.46662 11.5284 9.34782 12.2269C9.34215 12.2745 9.30464 12.312 9.25705 12.3177C8.79603 12.3876 8.7262 12.4015 8.64934 12.4085C8.46078 12.4225 8.46078 12.3456 8.43282 12.0453C8.40486 11.731 8.01375 11.0394 7.73434 10.8089C7.67146 10.76 7.62257 10.6483 7.62257 10.5645C7.61554 10.0895 7.11265 10.0266 7.07774 10.5016C7.0568 10.7671 7.09172 10.8369 7.44095 11.249C8.16739 12.1012 8.23027 12.4085 7.6924 12.4085C7.43393 12.4085 7.34316 12.3805 7.34316 12.3107C7.34316 12.2548 7.24537 12.1431 7.13359 12.0593C5.96715 11.2281 5.25469 8.5458 5.86232 7.29554C6.93105 5.12318 10.2698 5.08131 11.2058 6.93232C11.6389 7.81241 12.6657 8.26647 12.4981 7.51207ZM8.61443 8.42707C8.48172 8.51088 8.36994 8.53885 8.34901 8.49697C8.27215 8.37817 7.92291 8.42707 7.72732 8.58079C7.21045 8.98588 6.97994 9.60054 7.28028 9.76121C7.44095 9.84503 7.58063 9.74724 7.6435 9.59358C7.72732 9.39104 7.72732 9.28622 7.79715 9.03478C7.82511 8.93698 8.09053 8.70648 8.13248 9.04875C8.14639 9.19545 8.13944 9.43291 8.13944 9.69138C8.13944 10.1244 8.14646 10.3899 8.18138 10.5505C8.20927 10.6902 8.34198 10.788 8.48867 10.774C8.63536 10.76 8.74011 10.6343 8.74011 10.4877L8.72614 9.94978C8.71222 9.11859 8.64934 8.72045 8.94273 8.70648C9.01952 8.70648 9.09638 8.7135 9.11036 9.70536C9.12434 10.4527 9.15223 10.7321 9.43866 10.7321C9.66215 10.7321 9.72502 10.5505 9.72502 9.91486C9.72502 9.6285 9.69706 9.19545 9.71104 8.9719C9.72502 8.75537 9.87171 8.69249 9.99747 8.73443C10.179 8.80427 10.221 9.16053 10.1371 9.3491C10.0324 9.57961 10.0813 9.77519 10.4165 9.71934C10.7099 9.67044 10.7937 9.55164 10.675 9.36308C10.6261 9.28622 10.5632 9.12561 10.5353 9.01384C10.4165 8.51791 10.0254 8.30138 9.61324 8.50393C9.43866 8.58774 9.40374 8.58774 9.31291 8.47597C9.12434 8.30138 8.86587 8.27342 8.61443 8.42707ZM14.817 9.76121C13.9509 9.96376 14.349 10.2502 15.5015 10.2502C15.9835 10.2502 16.6331 10.2711 16.9404 10.2921C17.5412 10.341 17.9672 10.1733 17.7716 9.97078C17.5691 9.76817 15.4387 9.61452 14.817 9.76121ZM2.55148 10.5156C0.979873 10.7461 -0.354269 11.3398 0.393172 11.4865C1.16148 11.6332 3.25003 10.8788 3.03343 10.5365C2.99851 10.4597 2.92868 10.4597 2.55148 10.5156ZM10.7658 14.029C10.5772 14.3364 10.5771 14.3364 10.8287 14.5948C11.143 14.9231 11.115 15.1117 10.7448 15.1745C9.11036 15.4399 7.68544 15.4749 7.09172 15.3072C6.65164 15.1885 6.73545 14.8043 7.01486 14.6856C7.12663 14.6367 7.19647 14.2944 6.94502 14.1408C6.61672 13.9452 6.69358 13.6309 7.23139 13.561C7.73434 13.4912 8.7751 13.4912 10.7798 13.4702C10.9055 13.4702 10.9893 13.6029 10.9404 13.7147C10.8985 13.7985 10.8426 13.8963 10.7658 14.029ZM9.78087 16.1525C9.58529 16.5296 9.26401 16.6623 9.01256 16.6553C8.48172 16.6414 8.34901 16.2363 8.46078 16.1734C8.46774 16.1664 9.80188 16.1105 9.78087 16.1525Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_176_2979">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span>Let’s get you started</span>
+                </span>
+                <h2 class="card-title ft-recoleta text-white mt-5">
+                  Ready to Grow in Africa's <br />
+                  Healthcare Market?
+                </h2>
+                <p class="card-text ft-onest my-4">
+                  Let’s talk about how Arom Healthcare can support your goals in
+                  Nigeria and beyond
+                </p>
+                <div class="d-grid gap-4 d-md-block my-4">
+                  <a
+                    href=""
+                    class="ft-onest btn text-color px-3 py-2 border bg-light rounded-pill fs-8"
+                    >Partner With Us
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.6253 4.03523L4.34457 13.316"
+                          stroke="#0D4D2E"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.15486 4.05092L13.6253 4.03483L13.6098 11.5059"
+                          stroke="#0D4D2E"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span
+                  ></a>
+                  <a
+                    href="#"
+                    class="ft-onest btn rounded-pill px-3 py-2 ms-md-3 border-white text-white fs-8"
+                    >Contact Us
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.6253 4.03523L4.34457 13.316"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.15486 4.05092L13.6253 4.03483L13.6098 11.5059"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <div class="container">
+              <div class="c-footer row">
+                <div class="logo col-md-4 text-sm-start mb-5">
+                  <img src="./assets/imgs/logo.png " alt="" class="img-fluid" />
+                </div>
+                <div class="col-md-4 col-sm-12 text-sm-start mb-5">
+                  <div class="company ft-onest">
+                    <h6 class="mb-4">Company</h6>
+                  </div>
+                  <div class="company ft-onest pb-3">
+                    <a
+                      href="./services.html"
+                      class="text-decoration-none text-dark fs-9"
+                      >Our Services</a
+                    >
+                  </div>
+                  <div class="company ft-onest pb-3">
+                    <a
+                      href="./about.html"
+                      class="text-decoration-none text-dark fs-9"
+                      >About Us</a
+                    >
+                  </div>
+                  <div class="company ft-onest">
+                    <a
+                      href="./contact.html"
+                      class="text-decoration-none text-dark fs-9"
+                      >Contact Us</a
+                    >
+                  </div>
+                </div>
+                <div class="mb-5 col-md-4 col-sm-12 text-sm-start">
+                  <div class="company ft-onest">
+                    <h6 class="mb-4">Contact</h6>
+                  </div>
+                  <div class="contact ft-onest pb-3">
+                    <a class="fs-small text-decoration-none text-dark fs-9"
+                      ><b>Phone: </b>+2348102345680</a
+                    >
+                  </div>
+                  <div class="contact ft-onest pb-3">
+                    <a class="s-mail text-decoration-none text-dark fs-9"
+                      ><b>Email: </b>support@aromhealthcare.com</a
+                    >
+                  </div>
+                  <div class="contact ft-onest">
+                    <a class="s-mail text-decoration-none text-dark fs-9"
+                      ><b>Office Address: </b> Lagos, Nigeria.</a
+                    >
+                  </div>
+                </div>
+
+                <div class="icon-footer mt-3 py-3">
+                  <div class="row">
+                    <div class="col-sm col-md-6 text-center">
+                      <p class="text-dark fs-8">
+                        2025 Arom Healthcare. All Rights Reserved
+                      </p>
+                    </div>
+                    <div class="col-sm text-end">
+                      <a href="">
+                        <img src="./assets/imgs/7.svg" alt="" class="me-2" />
+                      </a>
+                      <a href="">
+                        <img src="./assets/imgs/8.svg" alt="" class="me-2" />
+                      </a>
+                      <a href="">
+                        <img src="./assets/imgs/9.svg" alt="" class="me-2" />
+                      </a>
+                      <a href="">
+                        <img src="./assets/imgs/10.svg" alt="" class="me-2" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/arom.js"></script>
+  </body>
+</html>
