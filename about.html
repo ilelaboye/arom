@@ -17,6 +17,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>ABOUT</title>
   </head>
@@ -31,34 +33,26 @@
               <img src="./assets/imgs/logo.png" alt="" />
             </a>
           </div>
-          <div class="d-flex align-items-center p-1">
-            <button
-              class="navbar-toggler arom-green rounded"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+          <button
+            id="toggleBtn"
+            onclick="toggleNav()"
+            class="arom-green rounded menu-icon navbar-toggler"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="14"
+              viewBox="0 0 21 14"
+              fill="none"
             >
-              <span class="navbar-toggler-icon"
-                ><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  version="1.1"
-                  id="mdi-menu"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
-                  /></svg
-              ></span>
-              <span class="text-white">MENU</span>
-            </button>
-          </div>
+              <path
+                d="M19.5 2H1.5C1.23478 2 0.98043 1.89464 0.792893 1.70711C0.605357 1.51957 0.5 1.26522 0.5 1C0.5 0.734784 0.605357 0.48043 0.792893 0.292893C0.98043 0.105357 1.23478 0 1.5 0H19.5C19.7652 0 20.0196 0.105357 20.2071 0.292893C20.3946 0.48043 20.5 0.734784 20.5 1C20.5 1.26522 20.3946 1.51957 20.2071 1.70711C20.0196 1.89464 19.7652 2 19.5 2ZM20.5 7C20.5 6.73478 20.3946 6.48043 20.2071 6.29289C20.0196 6.10536 19.7652 6 19.5 6H1.5C1.23478 6 0.98043 6.10536 0.792893 6.29289C0.605357 6.48043 0.5 6.73478 0.5 7C0.5 7.26522 0.605357 7.51957 0.792893 7.70711C0.98043 7.89464 1.23478 8 1.5 8H19.5C19.7652 8 20.0196 7.89464 20.2071 7.70711C20.3946 7.51957 20.5 7.26522 20.5 7ZM20.5 13C20.5 12.7348 20.3946 12.4804 20.2071 12.2929C20.0196 12.1054 19.7652 12 19.5 12H1.5C1.23478 12 0.98043 12.1054 0.792893 12.2929C0.605357 12.4804 0.5 12.7348 0.5 13C0.5 13.2652 0.605357 13.5196 0.792893 13.7071C0.98043 13.8946 1.23478 14 1.5 14H19.5C19.7652 14 20.0196 13.8946 20.2071 13.7071C20.3946 13.5196 20.5 13.2652 20.5 13Z"
+                fill="white"
+              />
+            </svg>
+            <span class="text-white ms-2">MENU</span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li>
@@ -67,11 +61,7 @@
                 >
               </li>
               <li>
-                <a
-                  href="./about.html"
-                  class="text-color active text-decoration-underline nav-link"
-                  >About Us</a
-                >
+                <a href="./about.html" class="text-dark nav-link">About Us</a>
               </li>
               <li>
                 <a href="./contact.html" class="text-dark nav-link"
@@ -89,6 +79,51 @@
               </li>
             </div>
           </div>
+          <aside class="sidebar" id="sidebar">
+            <div class="side-logo logo-close mt-5 mb-5">
+              <a src="./index.html"
+                ><img src="./assets/imgs/logo.png" alt=""
+              /></a>
+              <button id="close-btn" class="close-btn" onclick="toggleNav()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18.8137 17.9132L12.8998 11.9961L18.8137 6.07902C19.0519 5.83232 19.0519 5.44113 18.8137 5.19436C18.5695 4.94144 18.1667 4.93445 17.9139 5.17874L12 11.0958L6.08616 5.17881C5.83959 4.94051 5.44862 4.94051 5.20197 5.17881C4.9492 5.4231 4.9422 5.82618 5.18636 6.0791L11.1002 11.9961L5.18636 17.9131C5.06704 18.0325 5 18.1944 5 18.3632C4.99992 18.7148 5.28486 18.9999 5.6363 19C5.8051 19.0002 5.96699 18.933 6.08616 18.8134L12 12.8964L17.9139 18.8135C18.033 18.9331 18.195 19.0002 18.3638 19C18.5325 18.9999 18.6942 18.9329 18.8135 18.8136C19.0621 18.565 19.0622 18.1618 18.8137 17.9132Z"
+                    fill="#010101"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div id="navbarSupportedContent">
+              <ul class="navbar-nav nav ms-auto mb-2 mb-lg-0">
+                <li>
+                  <a href="./services.html" class="text-dark nav-link"
+                    >Our Services</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="text-dark nav-link">About Us</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="text-dark nav-link"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="mt-4">
+                  <a
+                    href="./services.html"
+                    class="ms-md-auto nav-link arom-green rounded-pill text-center"
+                    >Explore our services</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
         </nav>
       </div>
 
@@ -122,8 +157,22 @@
         </div>
       </section>
 
-      <section class="container-fluid about-us">
-        <div class="row g-4 my-5">
+      <section class="container-fluid about-us my-5">
+        <div class="owl-carousel">
+          <div class="card">
+            <img src="./assets/imgs/19.jpg" class="card-img" alt="..." />
+          </div>
+          <div class="card">
+            <img src="./assets/imgs/2i.png" class="card-img" alt="..." />
+          </div>
+          <div class="card">
+            <img src="./assets/imgs/3i.png" class="card-img" alt="..." />
+          </div>
+          <div class="card">
+            <img src="./assets/imgs/4i.png" class="card-img" alt="..." />
+          </div>
+        </div>
+        <!-- <div class="row g-4 my-5">
           <div class="col-md-3 col-sm-12">
             <div class="card">
               <img src="./assets/imgs/19.jpg" class="card-img" alt="..." />
@@ -144,7 +193,7 @@
               <img src="./assets/imgs/4i.png" class="card-img" alt="..." />
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <!-- end of row images -->
 
@@ -164,7 +213,7 @@
             <div class="col-sm-6 col-lg-7 texts">
               <div class="card">
                 <div class="card-body">
-                  <p class="ft-onest fs-6">
+                  <p class="ft-onest fs-8">
                     At Arom Healthcare Nigeria Limited, our mission is to
                     revolutionize healthcare accessibility in Nigeria and across
                     Africa by delivering premium pharmaceuticals, cutting-edge
@@ -192,7 +241,7 @@
             <div class="col-sm-6 col-lg-7">
               <div class="card texts">
                 <div class="card-body">
-                  <p class="ft-onest fs-6">
+                  <p class="ft-onest fs-8">
                     To be the leading gateway for healthcare innovation and
                     excellence in Africa — empowering lives through trusted
                     distribution, strategic partnerships, and sustainable access
@@ -215,18 +264,18 @@
             <div class="col-sm-6 col-lg-7">
               <div class="card texts">
                 <div class="card-body">
-                  <p class="fs-6 ft-onest">
+                  <p class="fs-8 ft-onest">
                     Arom Healthcare Nigeria Limited is redefining access to
                     healthcare across Africa. We believe every African deserves
                     the very best in medical care—no matter where they live.
                   </p>
-                  <p class="fs-6 ft-onest">
+                  <p class="fs-8 ft-onest">
                     From bustling city hospitals to remote rural clinics, we
                     ensure that high-quality medicines, medical equipment, and
                     essential healthcare solutions reach those who need them
                     most.
                   </p>
-                  <p class="fs-6 ft-onest">
+                  <p class="fs-8 ft-onest">
                     But we do more than deliver—we empower. As trusted advisors
                     to global healthcare companies, we simplify market entry and
                     growth across Nigeria and beyond. From regulatory approvals
@@ -234,7 +283,7 @@
                     our partners navigate Africa’s complex healthcare landscape
                     with confidence.
                   </p>
-                  <p class="fs-6 ft-onest">
+                  <p class="fs-8 ft-onest">
                     With a strong presence across West, East, and Southern
                     Africa, we provide scalable, cost-effective, and locally
                     tailored solutions that drive real impact—improving lives,
@@ -304,8 +353,10 @@
                     <div class="card h-100">
                       <div class="card-body rounded-5 bg-purple">
                         <img src="./assets/imgs/16.png" alt="" class="pt-3" />
-                        <h5 class="card-title my-3">Integrity</h5>
-                        <p class="card-text fs-8">
+                        <h5 class="card-title my-3 fs-6 ft-recoleta">
+                          Integrity
+                        </h5>
+                        <p class="card-text fs-9">
                           We operate with honesty and uphold the highest ethical
                           standards.
                         </p>
@@ -316,8 +367,10 @@
                     <div class="card h-100">
                       <div class="card-body rounded-5 bg-blue">
                         <img src="./assets/imgs/17.png" alt="" class="pt-3" />
-                        <h5 class="card-title my-3">Excellence</h5>
-                        <p class="card-text fs-8">
+                        <h5 class="card-title my-3 fs-6 ft-recoleta">
+                          Excellence
+                        </h5>
+                        <p class="card-text fs-9">
                           We strive for top-tier service delivery and customer
                           satisfaction.
                         </p>
@@ -328,8 +381,10 @@
                     <div class="card h-100">
                       <div class="card-body rounded-5 bg-green">
                         <img src="./assets/imgs/lb.png" alt="" class="pt-3" />
-                        <h5 class="card-title my-3">Innovation</h5>
-                        <p class="card-text fs-8">
+                        <h5 class="card-title my-3 fs-6 ft-recoleta">
+                          Innovation
+                        </h5>
+                        <p class="card-text fs-9">
                           We embrace new technologies and business models to
                           stay ahead.
                         </p>
@@ -340,8 +395,10 @@
                     <div class="card h-100">
                       <div class="card-body rounded-5 bg-yellow">
                         <img src="./assets/imgs/18.png" alt="" class="pt-3" />
-                        <h5 class="card-title my-3">Local Insights</h5>
-                        <p class="card-text fs-8">
+                        <h5 class="card-title my-3 fs-6 ft-recoleta">
+                          Local Insights
+                        </h5>
+                        <p class="card-text fs-9">
                           We use deep knowledge of African markets to unlock
                           global opportunity.
                         </p>
@@ -401,7 +458,7 @@
               </p>
               <div class="d-grid gap-4 d-md-block my-4">
                 <a
-                  href=""
+                  href="/contact.html"
                   class="ft-onest btn text-color px-3 py-2 border bg-light rounded-pill fs-8"
                   >Partner With Us
                   <span
@@ -428,7 +485,7 @@
                       /></svg></span
                 ></a>
                 <a
-                  href="#"
+                  href="/contact.html"
                   class="ft-onest btn rounded-pill px-3 py-2 ms-md-3 border-white text-white fs-8"
                   >Contact Us
                   <span
@@ -543,5 +600,26 @@
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/arom.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: false,
+          margin: 10,
+          responsive: {
+            0: {
+              items: 1.2,
+            },
+            // 600: {
+            //   items: 3,
+            // },
+            1000: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
