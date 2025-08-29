@@ -207,7 +207,7 @@
   background: #1f382d;
 }
 .logo img {
-  width: 130px;
+  width: 170px;
 }
 
 .fs-6 {
@@ -793,7 +793,7 @@ small {
 }
 @media (min-width: 768px) {
   .logo img {
-    width: 140px;
+    width: 240px;
   }
   nav ul a {
     font-size: 13px;
