@@ -793,7 +793,7 @@ small {
 }
 @media (min-width: 768px) {
   .logo img {
-    width: 240px;
+    width: 280px;
   }
   nav ul a {
     font-size: 13px;
