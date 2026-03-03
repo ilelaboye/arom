@@ -150,7 +150,7 @@
                   in Nigeria and beyond. Fill this form and we will respond
                   within 24 hours.</span
                 >
-                <div class="form-unit row g-2 mt-4">
+                <form id="contact-form" class="form-unit row g-2 mt-4">
                   <div class="col-md-6 col-sm-12">
                     <div class="col-auto">
                       <label for="full name" class="fs-p fs-8 col-form-label"
@@ -183,6 +183,7 @@
                       </span>
                       <input
                         type="text"
+                        name="first_name"
                         class="form-control border rounded-end"
                         placeholder="Enter your first name"
                       />
@@ -219,6 +220,7 @@
                       </span>
                       <input
                         type="text"
+                        name="last_name"
                         class="form-control border"
                         placeholder="Enter your last name"
                       />
@@ -245,7 +247,8 @@
                       </svg>
                     </span>
                     <input
-                      type="text"
+                      type="email"
+                      name="email"
                       class="form-control border"
                       placeholder="Enter your email address"
                     />
@@ -257,6 +260,7 @@
                   >
                   <input
                     type="text"
+                    name="phone"
                     class="form-control rounded-start border"
                     placeholder="Enter your phone number"
                   />
@@ -267,6 +271,7 @@
                   >
                   <input
                     type="text"
+                    name="company"
                     class="form-control rounded-start border"
                     placeholder="Enter your company's name"
                   />
@@ -277,15 +282,16 @@
                     >Message</label
                   >
                   <textarea
-                    name="Message"
+                    name="message"
                     rows="4"
                     class="form-control rounded-start border"
                     placeholder="Write your message"
-                  >
-                  </textarea>
+                  ></textarea>
                 </div>
 
-                <a href="#" class="btn arom-green rounded-pill">Send Message</a>
+                <div id="contact-status"></div>
+                <button type="submit" class="btn arom-green rounded-pill">Send Message</button>
+                </form>
               </div>
             </div>
           </div>
